@@ -1,0 +1,138 @@
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100%; 
+ 
+  background-image: url('keyboard-baby.gif');
+  background-size: 100% 120%;
+  
+
+}
+
+.background-layer{
+  
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.60), rgba(0, 0, 0, 0.5));
+
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+}
+
+
+.main-partition{
+height: 100vh;
+display: grid;
+grid-template-rows: 1fr 40px 60px 1fr;
+position: relative;
+z-index: 20;
+
+}
+
+.logo-text{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 140px;
+  padding-bottom: 40px;
+/* background-color: aliceblue;   */
+
+}
+
+
+
+.rules{
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  height: 30px;
+ 
+  color: rgb(220, 218, 218);
+  text-align: center;
+  justify-content: center;
+  padding-top: 0px;
+  padding-bottom: 10px;
+
+  /* background-color: lightgoldenrodyellow; */
+
+}
+
+.start-section {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 0;
+  /* background-color: aqua; */
+}
+
+.start-button{
+  width: 180px;
+  border-radius: 30px;
+  border: 2px solid #f9fcee;
+  background: none;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-family: 'Ubuntu', sans-serif;
+  cursor: pointer;
+  margin: 10px;
+  transition: 0.8s;
+  position: relative;
+  overflow: hidden;
+  color: rgb(255, 255, 101);
+
+}
+
+.start-button:hover{
+  color: #140f0f;
+  font-size: 22px;
+  font-weight: 500;
+
+}
+
+.start-button::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: #f9fcee;
+  z-index: -1;
+  transition: 0.8s;
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+
+
+.start-button:hover::before{
+  height: 180%;
+}
+
+
+
+
+.contact{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  padding-bottom: 15px;
+  width: 100%;
+  bottom: 0;
+  height: 40px;
+  color: white;
+
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(159, 159, 159);
+  font-size: 13px;
+  /* background-color: lightblue; */
+
+} 

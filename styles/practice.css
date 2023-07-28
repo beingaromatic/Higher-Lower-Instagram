@@ -1,0 +1,131 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Set the height of the body and html elements to 100% to fill the entire viewport. */
+}
+
+
+.start-section {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 100px;
+  /* color: white; */
+  
+  /* background-color: aqua; */
+}
+
+.correct-sign{
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  /* border: solid 2px white; */
+  background-color: rgb(26, 206, 47);
+  font-size: 30px;
+  color: white;
+
+  animation: rightanswer 0.8s forwards ease ; /* Apply the animation to the element */
+}
+
+
+/* Define the keyframes animation */
+@keyframes rightanswer {
+  0% {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    font-size: 0px;
+    /* color: greenyellow; */
+  }
+  70% {
+    opacity : 1;
+    height: 60px;
+    width: 60px;
+    font-size: 0px;
+    /* color: greenyellow; */
+  }
+  100%{
+    opacity : 1;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    /* color: black; */
+  }
+}
+
+.incorrect-sign{
+  margin-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  /* border: solid 2px white; */
+  background-color: rgb(216, 26, 26);
+  font-size: 30px;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+
+  animation: wronganswer 0.8s forwards ease ; /* Apply the animation to the element */
+}
+
+
+/* Define the keyframes animation */
+@keyframes wronganswer {
+  0% {
+    opacity: 0;
+    height: 0px;
+    width: 0px;
+    font-size: 0px;
+    /* color: greenyellow; */
+  }
+  70% {
+    opacity : 1;
+    height: 60px;
+    width: 60px;
+    font-size: 0px;
+    /* color: greenyellow; */
+  }
+  100%{
+    opacity : 1;
+    height: 60px;
+    width: 60px;
+    font-size: 30px;
+    /* color: black; */
+  }
+}
+
+#shownDiv{
+  opacity: 1;
+  height: auto;
+  overflow: hidden;
+  transition: height 1s ease, opacity 1s ease;
+
+}
+#shownDiv.hide{
+  opacity: 0;
+  height: 0;
+}
+
+#hiddenDiv {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: height 1s ease, opacity 1s ease;
+}
+
+#hiddenDiv.visible {
+  opacity: 1;
+  height: auto;
+}
+
+
+
+
