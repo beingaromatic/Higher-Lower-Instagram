@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="styles/title3.png" type="image/x-icon">
+  <title>Game Over</title>
+  <link rel="stylesheet" href="styles/last.css">
+</head>
+<body>
+
+  <div class="background-layer"></div>
+  
+  
+  <div class="main-partition">
+
+    
+    <div class="you-scored"> You scored : </div>
+    <div class="final-score" id="final-score-card"></div>
+    <div class="text-1"> Hours of scrolling and this? C'mon you can do better</div>
+
+    
+    <div class="two-buttons">
+        <div class="button-left-flex">
+            <button class="button-left" onclick="direct_to_index()">
+            Back to menu
+            </button>
+        </div>
+        <div class="button-right-flex">
+          <button class="button-right" onclick="direct_to_first()">
+          Play Again
+          </button>
+        </div>
+   </div>
+    
+    <div class="jokes" style="display: flex; align-items: center;" >
+      <span id="jokes"></span>
+     <span > &nbsp; <button onclick="joke()" style="background: none; border: none; color: rgb(184, 183, 183); cursor: pointer;"><b>⟳</b></button></span> 
+    </div>
+    
+
+    </div>
+    
+
+<script>
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const id = urlParams.get('id');
+console.log(id/912874573);
+document.getElementById('final-score-card').innerHTML = id/912874573;
+
+function direct_to_first(){
+    window.location.href = 'first.html';
+  }
+
+function direct_to_index(){
+    window.location.href = 'index.html';
+  }
+
+  async function joke() {
+  let config = {
+    headers: {
+      Accept: "application/json",
+    },
+  };
+
+  let a = await fetch("https://icanhazdadjoke.com/", config);
+  let b = await a.json();
+  document.getElementById("jokes").innerHTML = b.joke;
+
+
+  
+}
+window.onload = joke;
+  
+</script>
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="icon" href="styles/title3.png" type="image/x-icon">
+  <title>Higher Lower</title>
+  <link rel="stylesheet" href="styles/first.css">
+  <script src="script.js"></script>
+</head>
+
+
+<body>
+
+  <div class="main-div">
+    <div class="left-section">
+
+      <div class="background-left">
+        <img id="background-img-left" src="https://i.pinimg.com/736x/c7/e0/56/c7e056f914914c2184216f943cb640c6.jpg" 
+        height="100%"
+        width="100%" 
+        style="object-fit: cover;">
+      </div> 
+      <div class="blank-left">&nbsp;</div> 
+      <div class="logo-left">
+        <img src="styles/logo.png" style="height: 45px; margin-left: 40px; margin-top: 25px;">
+      </div>
+        
+      <div class="other-left">
+          <div class="blank-div"></div>
+          <div class="profile-picture-left">
+            <img id="profile-picture-left" src="https://i.pinimg.com/736x/c7/e0/56/c7e056f914914c2184216f943cb640c6.jpg">
+          </div>
+          <div class="profile-name-left" id="profile-name-left"></div>
+          <div class="profile-username-left" id="profile-username-left"></div>
+          <div class="text-has">has</div>
+          <div class="profile-followers-left" id="profile-followers-left"> </div>
+          <div class="text-follwers">followers</div>
+      </div>
+     
+  
+    </div>
+
+
+    <div class="right-section" >
+
+
+      <div class="background-right">
+         <img id="background-img-right" src="https://i.pinimg.com/736x/c7/e0/56/c7e056f914914c2184216f943cb640c6.jpg"  
+        height="100%"
+        width="100%" 
+        style="object-fit: cover;">
+      </div> 
+      <div class="blank-right">&nbsp;</div> 
+      <div class="score-right" style="margin-top: 7px;  display: flex; 
+        align-items: center; 
+        justify-content: end;"> 
+        <span style="color: antiquewhite; font-size: 20px; 
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 500;
+        margin-right: 7px;  
+       "> Score : </span>
+        <span id="score-board" style="
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          font-size: 25px;
+          font-weight: 500;
+          color: rgb(255, 255, 101);
+          margin-right: 10px;  
+          "></span>
+      </div>
+
+      <div class="other-right">
+
+        <div class="blank-div"></div>
+        <div class="profile-picture-right" src="https://i.pinimg.com/736x/c7/e0/56/c7e056f914914c2184216f943cb640c6.jpg">
+          <img id="profile-picture-right">
+        </div>
+        <div class="profile-name-right" id="profile-name-right"></div>
+        <div class="profile-username-right" id="profile-username-right"></div>
+        <div class="text-has">has</div>
+        
+        <!-- <div class="profile-followers-right" id="profile-followers-right"></div> -->
+        
+
+        <div class="buttons-right" id="buttons-right">
+        <button class="higher" onclick="result_higher()">Higher</button>
+        <button class="lower" onclick="result_lower()">Lower</button>
+        </div>
+
+        <div class="text-follwers">followers</div>
+
+      </div>
+  
+    </div>
+
+  </div>
+  
+  
+<script>
+ window.onload = function() {
+  console.log("Page is fully loaded.");
+  fetchDataFromAPI(); 
+  
+  }
+
+ 
+
+  </script>
+
+</body>
+</html>
